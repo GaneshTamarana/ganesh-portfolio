@@ -38,7 +38,7 @@ export default function Contact() {
     <section
       ref={sectionRef}
       id="contact"
-      className="relative w-full overflow-hidden py-20 sm:py-28 lg:py-32 transition-colors duration-500"
+      className="relative w-full overflow-hidden py-20 sm:py-28 lg:py-32"
     >
       {/* Subtle Dot Grid in Top-Right Background */}
       <div className="pointer-events-none absolute right-4 top-8 h-64 w-64 opacity-20 [background-image:radial-gradient(#FF7F11_1.2px,transparent_1.2px)] [background-size:16px_16px] dark:opacity-25" />

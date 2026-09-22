@@ -38,7 +38,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden px-5 pb-8 pt-24 transition-colors duration-500 sm:px-8 sm:pb-10 sm:pt-32 lg:px-12 lg:pt-40">
+    <footer className="relative overflow-hidden px-5 pb-8 pt-24 sm:px-8 sm:pb-10 sm:pt-32 lg:px-12 lg:pt-40">
       <div className="mx-auto max-w-7xl">
         {/* Main CTA */}
         <div className="border-b border-black/10 pb-20 dark:border-white/10 sm:pb-28 lg:pb-32">

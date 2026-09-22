@@ -54,6 +54,21 @@
 }
 
 /* =========================================================
+   Smooth Coordinated Theme Transition
+========================================================= */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: background-color 280ms cubic-bezier(0.16, 1, 0.3, 1) !important,
+              border-color 280ms cubic-bezier(0.16, 1, 0.3, 1) !important,
+              color 280ms cubic-bezier(0.16, 1, 0.3, 1) !important,
+              fill 280ms cubic-bezier(0.16, 1, 0.3, 1) !important,
+              box-shadow 280ms cubic-bezier(0.16, 1, 0.3, 1) !important,
+              opacity 280ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* =========================================================
    Base Reset
 ========================================================= */
 @layer base {

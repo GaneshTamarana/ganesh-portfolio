@@ -290,7 +290,7 @@ export default function Hero() {
                     bg-[radial-gradient(circle_at_center,rgba(190,183,164,0.40)_0%,rgba(255,127,17,0.04)_50%,transparent_72%)]
                     blur-2xl
                     transition-opacity
-                    duration-500
+                    duration-300
                     opacity-100
                     dark:opacity-0
                   "
@@ -310,7 +310,7 @@ export default function Hero() {
                     bg-[radial-gradient(circle_at_center,rgba(255,127,17,0.20)_0%,rgba(255,127,17,0.04)_48%,transparent_72%)]
                     blur-2xl
                     transition-opacity
-                    duration-500
+                    duration-300
                     opacity-0
                     dark:opacity-100
                   "
@@ -421,7 +421,7 @@ export default function Hero() {
                   absolute
                   inset-0
                   transition-opacity
-                  duration-500
+                  duration-300
                   ease-in-out
                   opacity-100
                   dark:opacity-0
@@ -455,7 +455,7 @@ export default function Hero() {
                   absolute
                   inset-0
                   transition-opacity
-                  duration-500
+                  duration-300
                   ease-in-out
                   opacity-0
                   dark:opacity-100
@@ -495,7 +495,7 @@ export default function Hero() {
               bg-[radial-gradient(circle_at_center,rgba(190,183,164,0.35)_0%,rgba(255,127,17,0.04)_50%,transparent_70%)]
               blur-xl
               transition-opacity
-              duration-500
+              duration-300
               opacity-100
               dark:opacity-0
             "
@@ -511,7 +511,7 @@ export default function Hero() {
               bg-[radial-gradient(circle_at_center,rgba(255,127,17,0.15)_0%,transparent_70%)]
               blur-xl
               transition-opacity
-              duration-500
+              duration-300
               opacity-0
               dark:opacity-100
             "
@@ -585,7 +585,7 @@ export default function Hero() {
               absolute
               inset-0
               transition-opacity
-              duration-500
+              duration-300
               ease-in-out
               opacity-100
               dark:opacity-0
@@ -619,7 +619,7 @@ export default function Hero() {
               absolute
               inset-0
               transition-opacity
-              duration-500
+              duration-300
               ease-in-out
               opacity-0
               dark:opacity-100

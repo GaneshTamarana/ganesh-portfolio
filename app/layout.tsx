@@ -35,7 +35,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-[#BEB7A4] text-[#000000] dark:bg-[#000000] dark:text-[#FFFFFC] transition-colors duration-500 antialiased selection:bg-[#FF7F11] selection:text-black">
+      <body className="min-h-full flex flex-col bg-[#BEB7A4] text-[#000000] dark:bg-[#000000] dark:text-[#FFFFFC] antialiased selection:bg-[#FF7F11] selection:text-black">
         <ThemeProvider>
           <SmoothScroll>{children}</SmoothScroll>
         </ThemeProvider>

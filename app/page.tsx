@@ -9,7 +9,7 @@ import Contact from "@/components/contact/Contact";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-[#BEB7A4] text-[#000000] dark:bg-[#000000] dark:text-[#FFFFFC] transition-colors duration-500">
+    <main className="relative min-h-screen bg-[#BEB7A4] text-[#000000] dark:bg-[#000000] dark:text-[#FFFFFC]">
       <ScrollBackground />
 
       <Navbar />
