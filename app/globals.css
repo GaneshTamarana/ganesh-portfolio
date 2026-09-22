@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* =========================================================
+   Tailwind v4 — class-based dark mode
+========================================================= */
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
+/* =========================================================
+   Tailwind v4 Theme Tokens
+========================================================= */
+@theme {
+  --color-canvas: #000000;
+  --color-offwhite: #FFFFFC;
+  --color-beige: #BEB7A4;
+  --color-accent-orange: #FF7F11;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* =========================================================
+   Design Tokens
+========================================================= */
+:root {
+  --background: #BEB7A4;
+  --foreground: #000000;
+  --muted: #FFFFFC;
+  --accent: #FF7F11;
+
+  --bg: #BEB7A4;
+  --bg-subtle: #b5ada8;
+  --fg: #000000;
+  --fg-muted: #2d2b27;
+  --border: rgba(0, 0, 0, 0.12);
+  --border-mid: rgba(0, 0, 0, 0.22);
+  --glow: rgba(255, 127, 17, 0.15);
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #FFFFFC;
+  --muted: #BEB7A4;
+  --accent: #FF7F11;
+
+  --bg: #000000;
+  --bg-subtle: #0d0d0d;
+  --fg: #FFFFFC;
+  --fg-muted: #BEB7A4;
+  --border: rgba(190, 183, 164, 0.15);
+  --border-mid: rgba(190, 183, 164, 0.28);
+  --glow: rgba(255, 127, 17, 0.14);
+}
+
+/* =========================================================
+   Base Reset
+========================================================= */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+
+  body {
+    margin: 0;
+    background: #BEB7A4;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+  }
+
+  .dark body {
+    background: #000000;
+    color: #FFFFFC;
+  }
+
+  ::selection {
+    background: #FF7F11;
+    color: #000000;
+  }
+
+  /* Links & Buttons */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font: inherit;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* =========================================================
+   Animations
+========================================================= */
+@keyframes skillsFade {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   Reduced-motion
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   Scrollbar Utilities
+========================================================= */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
