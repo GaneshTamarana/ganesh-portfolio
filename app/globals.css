@@ -24,33 +24,33 @@
    Design Tokens
 ========================================================= */
 :root {
-  --background: #BEB7A4;
-  --foreground: #000000;
-  --muted: #FFFFFC;
-  --accent: #FF7F11;
+  --background: #F7F4EC;
+  --foreground: #0E0E0E;
+  --muted: #404040;
+  --accent: #FF5500;
 
-  --bg: #BEB7A4;
-  --bg-subtle: #b5ada8;
-  --fg: #000000;
-  --fg-muted: #2d2b27;
-  --border: rgba(0, 0, 0, 0.12);
-  --border-mid: rgba(0, 0, 0, 0.22);
-  --glow: rgba(255, 127, 17, 0.15);
+  --bg: #F7F4EC;
+  --bg-subtle: #ECE8DD;
+  --fg: #0E0E0E;
+  --fg-muted: #525252;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-mid: rgba(0, 0, 0, 0.16);
+  --glow: rgba(255, 85, 0, 0.15);
 }
 
 .dark {
-  --background: #000000;
-  --foreground: #FFFFFC;
-  --muted: #BEB7A4;
-  --accent: #FF7F11;
+  --background: #070707;
+  --foreground: #FFFFFF;
+  --muted: #A3A3A3;
+  --accent: #FF5500;
 
-  --bg: #000000;
-  --bg-subtle: #0d0d0d;
-  --fg: #FFFFFC;
-  --fg-muted: #BEB7A4;
-  --border: rgba(190, 183, 164, 0.15);
-  --border-mid: rgba(190, 183, 164, 0.28);
-  --glow: rgba(255, 127, 17, 0.14);
+  --bg: #070707;
+  --bg-subtle: #121212;
+  --fg: #FFFFFF;
+  --fg-muted: #A3A3A3;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-mid: rgba(255, 255, 255, 0.2);
+  --glow: rgba(255, 85, 0, 0.18);
 }
 
 /* =========================================================
@@ -80,20 +80,20 @@ html.theme-transition *::after {
 
   body {
     margin: 0;
-    background: #BEB7A4;
-    color: #000000;
+    background: #F7F4EC;
+    color: #0E0E0E;
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
   }
 
   .dark body {
-    background: #000000;
-    color: #FFFFFC;
+    background: #070707;
+    color: #FFFFFF;
   }
 
   ::selection {
-    background: #FF7F11;
-    color: #000000;
+    background: #FF5500;
+    color: #FFFFFF;
   }
 
   /* Links & Buttons */

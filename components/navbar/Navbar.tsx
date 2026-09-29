@@ -26,20 +26,20 @@ function ThemeToggle() {
       className="
         relative
         flex
-        h-9
-        w-[50px]
+        h-8
+        w-[48px]
         items-center
         rounded-full
         border
-        border-black/15
-        bg-black/[0.05]
-        px-1
-        transition-colors
+        border-black/20
+        bg-white/60
+        p-1
+        transition-all
         duration-300
-        dark:border-[#BEB7A4]/25
-        dark:bg-[#000000]/60
-        hover:border-black/25
-        dark:hover:border-[#BEB7A4]/40
+        hover:border-black/35
+        dark:border-white/20
+        dark:bg-[#121212]
+        dark:hover:border-white/40
       "
     >
       {/* Track icons */}
@@ -47,12 +47,12 @@ function ThemeToggle() {
         className="
           pointer-events-none
           absolute
-          left-2
-          text-[10px]
+          left-1.5
+          text-[9px]
           transition-opacity
           duration-300
         "
-        style={{ opacity: isDark ? 1 : 0 }}
+        style={{ opacity: isDark ? 0.7 : 0 }}
         aria-hidden
       >
         🌙
@@ -62,12 +62,12 @@ function ThemeToggle() {
         className="
           pointer-events-none
           absolute
-          right-2
-          text-[10px]
+          right-1.5
+          text-[9px]
           transition-opacity
           duration-300
         "
-        style={{ opacity: isDark ? 0 : 1 }}
+        style={{ opacity: isDark ? 0 : 0.7 }}
         aria-hidden
       >
         ☀️
@@ -78,14 +78,15 @@ function ThemeToggle() {
         className="
           relative
           z-10
-          h-5
-          w-5
+          h-4.5
+          w-4.5
           rounded-full
-          bg-black
-          shadow-sm
+          bg-[#FF5500]
+          shadow-[0_0_8px_#FF5500]
           transition-all
           duration-300
-          dark:bg-[#FFFFFC]
+          dark:bg-white
+          dark:shadow-[0_0_6px_rgba(255,255,255,0.6)]
         "
         style={{ transform: isDark ? "translateX(20px)" : "translateX(0)" }}
       />
@@ -188,25 +189,22 @@ export default function Navbar() {
           }, 1500);
         }
       }}
-      className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-        shouldShow
+      className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${shouldShow
           ? "translate-y-0 opacity-100 pointer-events-auto"
           : "-translate-y-full opacity-0 pointer-events-none"
-      } ${
-        isScrolled
-          ? "bg-[#BEB7A4]/80 dark:bg-[#000000]/80 backdrop-blur-xl border-b border-black/10 dark:border-[#BEB7A4]/15 shadow-sm dark:shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
+        } ${isScrolled
+          ? "bg-[#F7F4EC]/85 dark:bg-[#070707]/85 backdrop-blur-xl border-b border-black/5 dark:border-white/10 shadow-sm dark:shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
           : "bg-transparent border-b border-transparent"
-      }`}
+        }`}
     >
       <div
-        className={`mx-auto flex w-full max-w-7xl min-w-0 items-center justify-between px-4 transition-all duration-300 sm:px-8 lg:px-12 ${
-          isScrolled ? "py-3 sm:py-3.5" : "py-4 sm:py-5"
-        }`}
+        className={`mx-auto flex w-full max-w-7xl min-w-0 items-center justify-between px-4 transition-all duration-300 sm:px-8 lg:px-12 ${isScrolled ? "py-3 sm:py-3.5" : "py-4 sm:py-5"
+          }`}
       >
         {/* Left: Brand Logo */}
         <a
           href="#home"
-          className="flex shrink-0 items-center text-base font-bold tracking-tight text-[#000000] transition-opacity hover:opacity-80 dark:text-[#FFFFFC] sm:text-lg"
+          className="flex shrink-0 items-center text-base font-bold tracking-tight text-[#000000] transition-opacity hover:opacity-80 dark:text-[#FFFFFF] sm:text-lg"
           onClick={() => {
             setOpen(false);
             setActiveSection("#home");
@@ -223,14 +221,14 @@ export default function Navbar() {
             gap-4
             rounded-full
             border
-            border-black/15
-            bg-[#FFFFFC]/75
+            border-black/10
+            bg-white/80
             px-5
             py-2
             shadow-sm
             backdrop-blur-xl
-            dark:border-[#BEB7A4]/15
-            dark:bg-[#000000]/85
+            dark:border-white/10
+            dark:bg-[#121212]/85
             md:flex
             lg:gap-7
             lg:px-7
@@ -258,16 +256,15 @@ export default function Navbar() {
                 "
               >
                 <span
-                  className={`transition-colors ${
-                    isActive
-                      ? "font-semibold text-black dark:text-[#FFFFFC]"
-                      : "text-black/65 hover:text-black dark:text-[#BEB7A4] dark:hover:text-[#FFFFFC]"
-                  }`}
+                  className={`transition-colors ${isActive
+                      ? "font-semibold text-black dark:text-white"
+                      : "text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white"
+                    }`}
                 >
                   {link.label}
                 </span>
                 {isActive && (
-                  <span className="absolute -bottom-1 h-[2px] w-full rounded-full bg-[#FF7F11]" />
+                  <span className="absolute -bottom-1 h-[2px] w-full rounded-full bg-[#FF5500]" />
                 )}
               </a>
             );
@@ -285,22 +282,20 @@ export default function Navbar() {
               rounded-full
               border
               border-transparent
-              bg-[#000000]
-              px-4
+              bg-[#0E0E0E]
+              px-5
               py-2
               text-[11px]
-              font-medium
-              text-[#FFFFFC]
+              font-semibold
+              text-[#FFFFFF]
               shadow-xs
               transition-all
-              hover:bg-[#FF7F11]
-              hover:text-[#000000]
-              dark:border-[#BEB7A4]/25
-              dark:bg-[#000000]
-              dark:text-[#FFFFFC]
-              dark:hover:border-[#FF7F11]
-              dark:hover:bg-[#FF7F11]
-              dark:hover:text-[#000000]
+              hover:bg-neutral-800
+              dark:border-white/20
+              dark:bg-white/[0.05]
+              dark:text-[#FFFFFF]
+              dark:hover:bg-white/10
+              dark:hover:border-white/35
               md:block
               lg:px-6
               lg:py-2.5
@@ -361,10 +356,9 @@ export default function Navbar() {
                   text-sm
                   font-medium
                   transition-colors
-                  ${
-                    isActive
-                      ? "bg-black/10 text-black font-semibold dark:bg-white/10 dark:text-[#FFFFFC]"
-                      : "text-black/75 hover:bg-black/[0.04] hover:text-black dark:text-[#BEB7A4] dark:hover:bg-white/[0.04] dark:hover:text-[#FFFFFC]"
+                  ${isActive
+                    ? "bg-black/10 text-black font-semibold dark:bg-white/10 dark:text-[#FFFFFC]"
+                    : "text-black/75 hover:bg-black/[0.04] hover:text-black dark:text-[#BEB7A4] dark:hover:bg-white/[0.04] dark:hover:text-[#FFFFFC]"
                   }
                 `}
               >
