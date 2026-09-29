@@ -76,32 +76,7 @@ export default function HeroTechShowcase() {
         "
       />
 
-      {/* ========================================================
-          DOT MATRIX GRID ACCENT (Upper Right)
-      ========================================================= */}
-      <div
-        className="
-          pointer-events-none
-          absolute
-          right-[6%]
-          top-[6%]
-          grid
-          grid-cols-4
-          gap-2.5
-          opacity-30
-          dark:opacity-35
-          sm:right-[8%]
-          sm:top-[8%]
-        "
-        aria-hidden="true"
-      >
-        {Array.from({ length: 24 }).map((_, i) => (
-          <span
-            key={i}
-            className="h-1 w-1 rounded-full bg-black/70 dark:bg-white"
-          />
-        ))}
-      </div>
+
 
       {/* ========================================================
           SVG CIRCUIT TRACES & ORBITS
