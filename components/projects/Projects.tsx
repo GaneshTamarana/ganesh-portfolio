@@ -180,7 +180,7 @@ export default function Projects() {
           >
             Things I&apos;ve
             <br />
-            built.
+            built
           </motion.h2>
 
           <motion.p
@@ -200,11 +200,10 @@ export default function Projects() {
           <button
             type="button"
             onClick={() => setFilter("all")}
-            className={`rounded-full px-3.5 sm:px-4 py-1.5 text-xs font-medium transition-all duration-300 ${
-              filter === "all"
+            className={`rounded-full px-3.5 sm:px-4 py-1.5 text-xs font-medium transition-all duration-300 ${filter === "all"
                 ? "border border-[#FF7F11] text-[#FF7F11] bg-[#FF7F11]/10 shadow-[0_0_10px_rgba(255,127,17,0.15)]"
                 : "border border-black/15 dark:border-white/10 text-black/60 dark:text-white/60 hover:border-black/30 dark:hover:border-white/30 hover:text-black dark:hover:text-white"
-            }`}
+              }`}
           >
             All (4)
           </button>
@@ -212,11 +211,10 @@ export default function Projects() {
           <button
             type="button"
             onClick={() => setFilter("professional")}
-            className={`rounded-full px-3.5 sm:px-4 py-1.5 text-xs font-medium transition-all duration-300 ${
-              filter === "professional"
+            className={`rounded-full px-3.5 sm:px-4 py-1.5 text-xs font-medium transition-all duration-300 ${filter === "professional"
                 ? "border border-[#FF7F11] text-[#FF7F11] bg-[#FF7F11]/10 shadow-[0_0_10px_rgba(255,127,17,0.15)]"
                 : "border border-black/15 dark:border-white/10 text-black/60 dark:text-white/60 hover:border-black/30 dark:hover:border-white/30 hover:text-black dark:hover:text-white"
-            }`}
+              }`}
           >
             Professional (2)
           </button>
@@ -224,11 +222,10 @@ export default function Projects() {
           <button
             type="button"
             onClick={() => setFilter("personal")}
-            className={`rounded-full px-3.5 sm:px-4 py-1.5 text-xs font-medium transition-all duration-300 ${
-              filter === "personal"
+            className={`rounded-full px-3.5 sm:px-4 py-1.5 text-xs font-medium transition-all duration-300 ${filter === "personal"
                 ? "border border-[#FF7F11] text-[#FF7F11] bg-[#FF7F11]/10 shadow-[0_0_10px_rgba(255,127,17,0.15)]"
                 : "border border-black/15 dark:border-white/10 text-black/60 dark:text-white/60 hover:border-black/30 dark:hover:border-white/30 hover:text-black dark:hover:text-white"
-            }`}
+              }`}
           >
             Personal (2)
           </button>
@@ -308,32 +305,17 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  {/* Right Column: Browser Mockup Preview */}
+                  {/* Right Column: Image Preview without browser frame */}
                   <div className="w-full shrink-0 self-center">
-                    <div className="overflow-hidden rounded-lg sm:rounded-xl border border-black/15 dark:border-white/15 bg-black dark:bg-[#000000] shadow-sm">
-                      {/* Browser Chrome Bar */}
-                      <div className="flex h-5 sm:h-6 items-center justify-between border-b border-black/15 dark:border-white/10 bg-black/[0.04] dark:bg-[#111111] px-2">
-                        <div className="flex items-center gap-1">
-                          <span className="h-1.5 w-1.5 rounded-full bg-red-500/80" />
-                          <span className="h-1.5 w-1.5 rounded-full bg-yellow-500/80" />
-                          <span className="h-1.5 w-1.5 rounded-full bg-green-500/80" />
-                        </div>
-                        <span className="font-mono text-[7.5px] sm:text-[9px] text-black/50 dark:text-white/50 truncate max-w-[70%]">
-                          {project.domain}
-                        </span>
-                        <div className="w-2" />
-                      </div>
-
-                      {/* Preview Image */}
-                      <div className="relative aspect-[4/3] sm:aspect-[16/10] w-full overflow-hidden bg-black/5 dark:bg-[#000000]">
-                        <Image
-                          src={project.image}
-                          alt={`${project.title} preview`}
-                          fill
-                          sizes="(max-width: 640px) 135px, (max-width: 1024px) 280px, 360px"
-                          className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                        />
-                      </div>
+                    <div className="relative aspect-[4/3] sm:aspect-[16/10] w-full overflow-hidden rounded-lg sm:rounded-xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/[0.03] shadow-sm">
+                      <Image
+                        src={project.image}
+                        alt={`${project.title} preview`}
+                        fill
+                        sizes="(max-width: 640px) 135px, (max-width: 1024px) 280px, 360px"
+                        loading={index < 2 ? "eager" : "lazy"}
+                        className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                      />
                     </div>
                   </div>
                 </div>

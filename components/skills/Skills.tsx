@@ -106,7 +106,7 @@ export default function Skills() {
             transition={getTransition(0.1, 0.5)}
             className="mt-3 text-3xl font-semibold tracking-[-0.04em] text-black dark:text-[#FFFFFC] sm:text-4xl lg:text-5xl"
           >
-            What I build with.
+            What I build with
           </motion.h2>
 
           <motion.p

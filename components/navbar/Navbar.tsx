@@ -190,8 +190,8 @@ export default function Navbar() {
         }
       }}
       className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] ${shouldShow
-          ? "translate-y-0 opacity-100 pointer-events-auto"
-          : "-translate-y-full opacity-0 pointer-events-none"
+        ? "translate-y-0 opacity-100 pointer-events-auto"
+        : "-translate-y-full opacity-0 pointer-events-none"
         } ${isScrolled
           ? "bg-[#F7F4EC]/85 dark:bg-[#070707]/85 backdrop-blur-xl border-b border-black/5 dark:border-white/10 shadow-sm dark:shadow-[0_8px_32px_rgba(0,0,0,0.6)]"
           : "bg-transparent border-b border-transparent"
@@ -210,7 +210,7 @@ export default function Navbar() {
             setActiveSection("#home");
           }}
         >
-          Ganesh.
+          Ganesh
         </a>
 
         {/* Center: Desktop Navigation Pill */}
@@ -257,8 +257,8 @@ export default function Navbar() {
               >
                 <span
                   className={`transition-colors ${isActive
-                      ? "font-semibold text-black dark:text-white"
-                      : "text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white"
+                    ? "font-semibold text-black dark:text-white"
+                    : "text-neutral-600 hover:text-black dark:text-neutral-400 dark:hover:text-white"
                     }`}
                 >
                   {link.label}

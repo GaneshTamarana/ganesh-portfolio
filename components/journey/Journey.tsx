@@ -121,7 +121,7 @@ export default function Journey() {
               transition={getTransition(0.1, 0.5)}
               className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-black dark:text-[#FFFFFC] sm:text-4xl lg:text-5xl"
             >
-              How I got here.
+              How I got here
             </motion.h2>
           </div>
 
@@ -157,20 +157,18 @@ export default function Journey() {
                     className="group relative flex shrink-0 flex-col items-start px-2 py-2 text-left transition-colors sm:px-0"
                   >
                     <span
-                      className={`font-mono text-[11px] font-semibold transition-colors duration-200 ${
-                        isActive
+                      className={`font-mono text-[11px] font-semibold transition-colors duration-200 ${isActive
                           ? "text-[#FF7F11]"
                           : "text-black/40 dark:text-[#BEB7A4]/50 group-hover:text-black dark:group-hover:text-[#FFFFFC]"
-                      }`}
+                        }`}
                     >
                       {stage.step}
                     </span>
                     <span
-                      className={`mt-1 text-xs sm:text-sm font-bold tracking-wider transition-colors duration-200 ${
-                        isActive
+                      className={`mt-1 text-xs sm:text-sm font-bold tracking-wider transition-colors duration-200 ${isActive
                           ? "text-black dark:text-[#FFFFFC]"
                           : "text-black/50 dark:text-[#BEB7A4]/60 group-hover:text-black dark:group-hover:text-[#FFFFFC]"
-                      }`}
+                        }`}
                     >
                       {stage.navTitle}
                     </span>
@@ -243,7 +241,7 @@ export default function Journey() {
         </motion.div>
 
         {/* ========================================================
-            VISUAL CLIMAX: EDUPROVA SPOTLIGHT CARD
+            FLAGSHIP EXPERIENCE: EDUPROVA SPOTLIGHT CARD
         ========================================================= */}
         <motion.div
           initial={shouldReduceMotion ? { opacity: 0, y: 16 } : { opacity: 0, y: 22 }}
@@ -299,7 +297,7 @@ export default function Journey() {
 
             <div className="lg:text-right shrink-0 pt-2">
               <span className="inline-block rounded border border-[#FF7F11]/40 bg-[#FF7F11]/10 px-3 py-1 text-[11px] font-mono uppercase tracking-[0.18em] text-[#FF7F11]">
-                Professional Climax
+                Career Milestone
               </span>
             </div>
           </div>

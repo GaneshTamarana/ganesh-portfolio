@@ -512,27 +512,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* ========================================================
-            BOTTOM FOOTER BAR
-        ========================================================= */}
-        <div className="mt-14 sm:mt-16 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t border-black/10 dark:border-white/10 pt-6">
-          <div className="flex items-center gap-2.5">
-            <span className="font-mono text-[10.5px] uppercase tracking-[0.2em] text-black/50 dark:text-[#BEB7A4]/70">
-              LET&apos;S TURN IDEAS INTO REALITY.
-            </span>
-            <span className="h-1.5 w-1.5 rounded-full bg-[#FF7F11] shadow-[0_0_6px_#FF7F11]" />
-          </div>
-
-          <a
-            href="mailto:ganesh@example.com"
-            className="group inline-flex items-center gap-2 font-mono text-xs text-black/60 dark:text-[#BEB7A4] hover:text-[#FF7F11] dark:hover:text-[#FF7F11] transition-colors"
-          >
-            <span>ganesh@example.com</span>
-            <span className="text-[#FF7F11] transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </a>
-        </div>
       </div>
     </section>
   );
