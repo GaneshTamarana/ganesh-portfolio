@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="flex items-center gap-3">
             {/* GitHub */}
             <a
-              href="https://github.com/ganesh-tamarana"
+              href="https://github.com/ganeshtamarana"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -106,7 +106,7 @@ export default function Footer() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/ganesh-tamarana"
+              href="https://www.linkedin.com/in/ganesh-t-200491281"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

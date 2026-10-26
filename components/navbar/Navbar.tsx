@@ -4,11 +4,11 @@ import { useState, useEffect, useRef } from "react";
 import { useTheme } from "@/lib/ThemeContext";
 
 const links = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Journey", href: "#journey" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Journey", href: "/#journey" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 /* ---------------------------------------------------------- */
@@ -203,7 +203,7 @@ export default function Navbar() {
       >
         {/* Left: Brand Logo */}
         <a
-          href="#home"
+          href="/#home"
           className="flex shrink-0 items-center text-base font-bold tracking-tight text-[#000000] transition-opacity hover:opacity-80 dark:text-[#FFFFFF] sm:text-lg"
           onClick={() => {
             setOpen(false);
@@ -276,7 +276,7 @@ export default function Navbar() {
           <ThemeToggle />
 
           <a
-            href="#contact"
+            href="/#contact"
             className="
               hidden
               rounded-full
@@ -370,7 +370,7 @@ export default function Navbar() {
             );
           })}
           <a
-            href="#contact"
+            href="/#contact"
             onClick={() => setOpen(false)}
             className="
               mt-2

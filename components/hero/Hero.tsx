@@ -394,7 +394,7 @@ export default function Hero() {
           "
         >
           <a
-            href="https://github.com/ganesh-tamaran"
+            href="https://github.com/ganeshtamarana"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
@@ -431,7 +431,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="https://linkedin.com/in/ganesh-tamaran"
+            href="https://www.linkedin.com/in/ganesh-t-200491281"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
