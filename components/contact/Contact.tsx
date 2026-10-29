@@ -105,7 +105,7 @@ export default function Contact() {
               initial={shouldReduceMotion ? { opacity: 0, y: 16 } : { opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={getTransition(0.24, 0.55)}
-              className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4"
+              className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-4"
             >
               {/* Badge 1: Open to */}
               <div className="flex items-start gap-3">
@@ -199,7 +199,7 @@ export default function Contact() {
 
                   {/* Email Direct */}
                   <a
-                    href="mailto:ganesh@example.com"
+                    href="mailto:ganeshtamarana@zohomail.in"
                     aria-label="Send Direct Email"
                     className="flex h-11 w-11 items-center justify-center rounded-full border border-black/15 dark:border-white/15 bg-black/5 dark:bg-white/5 text-black dark:text-white hover:border-[#FF7F11] hover:text-[#FF7F11] transition-colors"
                   >
@@ -326,131 +326,90 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="group relative flex w-full items-center justify-center gap-2 rounded-full bg-[#FF7F11] py-3.5 px-6 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-[0_4px_24px_rgba(255,127,17,0.35)] transition-all hover:bg-[#FF7F11]/90 active:scale-[0.99] disabled:opacity-75"
+                className="group relative flex w-full items-center justify-center gap-2.5 rounded-full bg-[#FF7F11] py-3.5 px-6 font-mono text-xs sm:text-sm font-bold uppercase tracking-wider text-white shadow-[0_4px_24px_rgba(255,127,17,0.35)] transition-all hover:bg-[#FF7F11]/90 active:scale-[0.99] disabled:opacity-75 disabled:cursor-not-allowed"
               >
-                {/* Paper plane icon */}
-                <svg className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                {/* Modern Send Icon */}
+                <svg
+                  className="h-4 w-4 -rotate-45 -mt-0.5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
                 </svg>
                 <span>{isSubmitting ? "Sending..." : submitted ? "Message Sent!" : "Send Message"}</span>
-                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </button>
             </form>
 
-            {/* Desktop Info Footer inside card: Email, Location, Availability */}
-            <div className="hidden lg:grid grid-cols-3 gap-4 border-t border-black/10 dark:border-white/10 pt-6 mt-6">
-              {/* Email */}
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center text-[#FF7F11]">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
+            {/* Info Footer: Email, Location, Availability */}
+            <div className="border-t border-black/10 dark:border-white/10 pt-6 mt-6 space-y-4">
+              {/* Row 1: Email & Location */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {/* Email */}
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#FF7F11]/10 text-[#FF7F11]">
+                    <svg className="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <span className="font-mono text-[10px] font-medium uppercase tracking-wider text-black/50 dark:text-white/50 block">
+                      EMAIL
+                    </span>
+                    <a
+                      href="mailto:ganeshtamarana@zohomail.in"
+                      title="ganeshtamarana@zohomail.in"
+                      className="text-xs font-semibold text-black dark:text-[#FFFFFC] hover:text-[#FF7F11] dark:hover:text-[#FF7F11] truncate block transition-colors"
+                    >
+                      ganeshtamarana@zohomail.in
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <span className="font-mono text-[9.5px] uppercase tracking-wider text-black/50 dark:text-white/50 block">
-                    EMAIL
-                  </span>
-                  <a href="mailto:ganesh@example.com" className="text-xs font-medium text-black dark:text-[#FFFFFC] hover:text-[#FF7F11] truncate block">
-                    ganesh@example.com
-                  </a>
+
+                {/* Location */}
+                <div className="flex items-center gap-3 min-w-0">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#FF7F11]/10 text-[#FF7F11]">
+                    <svg className="h-4.5 w-4.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <span className="font-mono text-[10px] font-medium uppercase tracking-wider text-black/50 dark:text-white/50 block">
+                      LOCATION
+                    </span>
+                    <span className="text-xs font-semibold text-black dark:text-[#FFFFFC] block truncate">
+                      Remote / India
+                    </span>
+                  </div>
                 </div>
               </div>
 
-              {/* Location */}
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center text-[#FF7F11]">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <div>
-                  <span className="font-mono text-[9.5px] uppercase tracking-wider text-black/50 dark:text-white/50 block">
-                    LOCATION
-                  </span>
-                  <span className="text-xs font-medium text-black dark:text-[#FFFFFC]">
-                    Remote / India
-                  </span>
-                </div>
-              </div>
-
-              {/* Availability */}
-              <div className="flex items-center gap-3">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center text-[#FF7F11]">
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <div>
-                  <span className="font-mono text-[9.5px] uppercase tracking-wider text-black/50 dark:text-white/50 block">
+              {/* Row 2: Availability Pill */}
+              <div className="flex items-center justify-between rounded-xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] px-3.5 py-2.5">
+                <div className="flex items-center gap-2">
+                  <div className="flex h-5 w-5 shrink-0 items-center justify-center text-[#FF7F11]">
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <span className="font-mono text-[10px] font-medium uppercase tracking-wider text-black/50 dark:text-white/50">
                     AVAILABILITY
                   </span>
-                  <div className="flex items-center gap-1.5 text-xs font-medium text-black dark:text-[#FFFFFC]">
-                    <span className="h-1.5 w-1.5 rounded-full bg-green-500 shadow-[0_0_6px_rgba(34,197,94,0.7)]" />
-                    <span>Open to opportunities</span>
-                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
+                  </span>
+                  <span className="text-xs font-semibold text-black dark:text-[#FFFFFC]">
+                    Open to opportunities
+                  </span>
                 </div>
               </div>
             </div>
           </motion.div>
-        </div>
-
-        {/* ========================================================
-            MOBILE INFO CARDS (Matches Screenshot 2)
-        ========================================================= */}
-        <div className="lg:hidden mt-8 space-y-3">
-          {/* Card 1: Email */}
-          <div className="flex items-center gap-3.5 rounded-2xl border border-black/15 dark:border-white/10 bg-black/[0.02] dark:bg-[#070707] p-4">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center text-[#FF7F11]">
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <div>
-              <span className="text-xs font-bold text-black dark:text-[#FFFFFC] block">
-                Email
-              </span>
-              <a href="mailto:ganesh@example.com" className="text-xs text-black/60 dark:text-[#BEB7A4]/75 hover:text-[#FF7F11]">
-                ganesh@example.com
-              </a>
-            </div>
-          </div>
-
-          {/* Card 2: Location */}
-          <div className="flex items-center gap-3.5 rounded-2xl border border-black/15 dark:border-white/10 bg-black/[0.02] dark:bg-[#070707] p-4">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center text-[#FF7F11]">
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>
-            </div>
-            <div>
-              <span className="text-xs font-bold text-black dark:text-[#FFFFFC] block">
-                Location
-              </span>
-              <span className="text-xs text-black/60 dark:text-[#BEB7A4]/75">
-                Remote / India
-              </span>
-            </div>
-          </div>
-
-          {/* Card 3: Availability */}
-          <div className="flex items-center gap-3.5 rounded-2xl border border-black/15 dark:border-white/10 bg-black/[0.02] dark:bg-[#070707] p-4">
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center text-[#FF7F11]">
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <div>
-              <span className="text-xs font-bold text-black dark:text-[#FFFFFC] block">
-                Availability
-              </span>
-              <div className="flex items-center gap-1.5 text-xs text-black/60 dark:text-[#BEB7A4]/75">
-                <span className="h-1.5 w-1.5 rounded-full bg-green-500 shadow-[0_0_6px_rgba(34,197,94,0.7)]" />
-                <span>Open to opportunities</span>
-              </div>
-            </div>
-          </div>
         </div>
 
         {/* ========================================================
@@ -490,7 +449,7 @@ export default function Contact() {
 
               {/* Direct Mail */}
               <a
-                href="mailto:ganesh@example.com"
+                href="mailto:ganeshtamarana@zohomail.in"
                 aria-label="Send Direct Email"
                 className="flex h-11 w-11 items-center justify-center rounded-full border border-black/15 dark:border-white/15 bg-black/5 dark:bg-white/5 text-black dark:text-white hover:border-[#FF7F11] hover:text-[#FF7F11]"
               >

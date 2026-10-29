@@ -21,8 +21,8 @@ interface TimelineStage {
 const timelineStages: TimelineStage[] = [
   {
     step: "01",
-    year: "2022",
-    periodLabel: "2022 · Foundations",
+    year: "2024",
+    periodLabel: "2024 · Foundations",
     title: "Java Foundations & Core Engineering",
     subtitle: "Programming Fundamentals & Relational Systems",
     milestone: "Computer Science & System Fundamentals",
@@ -32,8 +32,8 @@ const timelineStages: TimelineStage[] = [
   },
   {
     step: "02",
-    year: "2023",
-    periodLabel: "2023 · Backend Focus",
+    year: "2024",
+    periodLabel: "2024 · Backend Focus",
     title: "Enterprise Backend Architecture",
     subtitle: "Spring Boot, Hibernate / JPA & REST APIs",
     milestone: "Shipped Full-Stack E-Commerce Platform",
@@ -44,8 +44,8 @@ const timelineStages: TimelineStage[] = [
   },
   {
     step: "03",
-    year: "2024",
-    periodLabel: "2024 · Web Expansion",
+    year: "2026",
+    periodLabel: "2026 · Web Expansion",
     title: "Modern Web & Real-Time Systems",
     subtitle: "Component Architecture & Event-Driven Systems",
     milestone: "Built Real-Time Task Management System",
@@ -56,8 +56,8 @@ const timelineStages: TimelineStage[] = [
   },
   {
     step: "04",
-    year: "2025",
-    periodLabel: "2025 · Client Platforms",
+    year: "2026",
+    periodLabel: "2026 · Client Platforms",
     title: "Production Architecture & Client Delivery",
     subtitle: "Next.js 16, App Router & Production Deployments",
     milestone: "Launched Manyaseema NGO Web Platform (Live)",
@@ -171,11 +171,10 @@ export default function Journey() {
               >
                 {/* Milestone Node on Spine Line */}
                 <div
-                  className={`absolute -left-[19px] sm:-left-[29px] top-4 sm:top-5 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full border transition-all duration-300 ${
-                    stage.isCurrent
-                      ? "border-[#FF7F11] bg-[#FF7F11] text-white shadow-[0_0_14px_rgba(255,127,17,0.7)]"
-                      : "border-black/20 dark:border-white/20 bg-[#F7F4EC] dark:bg-[#070707] text-[#FF7F11] group-hover:border-[#FF7F11] group-hover:shadow-[0_0_8px_rgba(255,127,17,0.4)]"
-                  }`}
+                  className={`absolute -left-[19px] sm:-left-[29px] top-4 sm:top-5 flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full border transition-all duration-300 ${stage.isCurrent
+                    ? "border-[#FF7F11] bg-[#FF7F11] text-white shadow-[0_0_14px_rgba(255,127,17,0.7)]"
+                    : "border-black/20 dark:border-white/20 bg-[#F7F4EC] dark:bg-[#070707] text-[#FF7F11] group-hover:border-[#FF7F11] group-hover:shadow-[0_0_8px_rgba(255,127,17,0.4)]"
+                    }`}
                 >
                   {stage.isCurrent ? (
                     <span className="h-2 w-2 rounded-full bg-white animate-ping" />
@@ -188,21 +187,19 @@ export default function Journey() {
 
                 {/* Milestone Card */}
                 <div
-                  className={`rounded-2xl border transition-all duration-300 p-5 sm:p-7 ${
-                    stage.isCurrent
-                      ? "border-[#FF7F11]/40 bg-gradient-to-br from-[#FF7F11]/[0.05] to-transparent dark:from-[#FF7F11]/[0.07] dark:to-transparent shadow-sm dark:shadow-[0_0_25px_rgba(255,127,17,0.06)]"
-                      : "border-black/15 dark:border-white/10 bg-black/[0.015] dark:bg-white/[0.02] hover:border-[#FF7F11]/40 hover:bg-black/[0.025] dark:hover:bg-white/[0.035]"
-                  }`}
+                  className={`rounded-2xl border transition-all duration-300 p-5 sm:p-7 ${stage.isCurrent
+                    ? "border-[#FF7F11]/40 bg-gradient-to-br from-[#FF7F11]/[0.05] to-transparent dark:from-[#FF7F11]/[0.07] dark:to-transparent shadow-sm dark:shadow-[0_0_25px_rgba(255,127,17,0.06)]"
+                    : "border-black/15 dark:border-white/10 bg-black/[0.015] dark:bg-white/[0.02] hover:border-[#FF7F11]/40 hover:bg-black/[0.025] dark:hover:bg-white/[0.035]"
+                    }`}
                 >
                   {/* Top Row: Year Pill + Milestone Deliverable Badge */}
                   <div className="flex flex-wrap items-center justify-between gap-2.5 mb-3">
                     <div className="flex items-center gap-2">
                       <span
-                        className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 font-mono text-[10px] sm:text-[10.5px] font-semibold uppercase tracking-wider ${
-                          stage.isCurrent
-                            ? "bg-[#FF7F11]/15 text-[#FF7F11] border border-[#FF7F11]/30"
-                            : "bg-black/5 dark:bg-white/5 text-black/70 dark:text-[#BEB7A4] border border-black/10 dark:border-white/10"
-                        }`}
+                        className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 font-mono text-[10px] sm:text-[10.5px] font-semibold uppercase tracking-wider ${stage.isCurrent
+                          ? "bg-[#FF7F11]/15 text-[#FF7F11] border border-[#FF7F11]/30"
+                          : "bg-black/5 dark:bg-white/5 text-black/70 dark:text-[#BEB7A4] border border-black/10 dark:border-white/10"
+                          }`}
                       >
                         {stage.isCurrent && (
                           <span className="h-1.5 w-1.5 rounded-full bg-[#FF7F11] animate-pulse" />
